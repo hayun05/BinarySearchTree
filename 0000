@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>인공지능의 역사</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+
+      background: #111827;
+      color: white;
+
+      font-family: sans-serif;
+    }
+
+    /* 페이지 */
+    section {
+      position: absolute;
+      inset: 0;
+
+      opacity: 0;
+      pointer-events: none;
+
+      transition: opacity 0.5s ease;
+
+      background: #111827;
+    }
+
+    section.active {
+      opacity: 1;
+      pointer-events: auto;
+      z-index: 10;
+    }
+
+    /* 내부 스크롤 */
+    .section-scroll {
+      height: 100vh;
+      overflow-y: auto;
+
+      padding: 100px 40px;
+    }
+
+    /* 스크롤바 숨김 */
+    .section-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* 오른쪽 연도 */
+    .timeline-link {
+      transition: all 0.3s ease;
+    }
+
+    .timeline-link.active {
+      color: #fb923c;
+      transform: scale(1.15);
+    }
+
+    /* 이미지 */
+    .section-image {
+      width: 100%;
+      max-width: 800px;
+
+      border-radius: 24px;
+
+      margin: 0 auto 40px auto;
+
+      display: block;
+    }
+
+    /* 내용 간격 */
+    .content-group {
+      margin-bottom: 180px;
+    }
+
+    /* 등장 애니메이션 */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+
+      transition: all 0.8s ease;
+    }
+
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 오른쪽 연도 -->
+  <div class="fixed right-6 top-1/2 -translate-y-1/2 z-50 space-y-5 text-sm">
+
+    <a href="#title" class="timeline-link active block text-gray-500">
+      TITLE
+    </a>
+
+    <a href="#birth" class="timeline-link block text-gray-500">
+      1950
+    </a>
+
+    <a href="#winter" class="timeline-link block text-gray-500">
+      1970
+    </a>
+
+    <a href="#mlp" class="timeline-link block text-gray-500">
+      1980
+    </a>
+
+    <a href="#ml" class="timeline-link block text-gray-500">
+      1990
+    </a>
+
+    <a href="#deep" class="timeline-link block text-gray-500">
+      2010
+    </a>
+
+    <a href="#golden" class="timeline-link block text-gray-500">
+      2015
+    </a>
+
+    <a href="#transformer" class="timeline-link block text-gray-500">
+      2017
+    </a>
+
+    <a href="#genai" class="timeline-link block text-gray-500">
+      2022
+    </a>
+
+  </div>
+
+  <!-- TITLE -->
+  <section id="title" class="active">
+
+    <div class="section-scroll flex items-center justify-center text-center">
+
+      <div class="fade-in show">
+
+        <h1 class="text-7xl font-black mb-8">
+          인공지능의 역사
+        </h1>
+
+        <p class="text-gray-400 text-2xl">
+          AI는 어떻게 발전해왔을까?
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- 1950 -->
+  <section id="birth">
+
+    <div class="section-scroll">
+
+      <div class="max-w-5xl mx-auto">
+
+        <p class="text-orange-400 text-lg mb-4">
+          1950s
+        </p>
+
+        <h2 class="text-6xl font-black mb-24 fade-in">
+          개념의 탄생
+        </h2>
+
+        <!-- 튜링 -->
+        <div class="content-group fade-in">
+
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Alan_Turing_Aged_16.jpg"
+            class="section-image shadow-2xl"
+          />
+
+          <h3 class="text-4xl font-bold mb-6">
+            앨런 튜링
+          </h3>
+
+          <p class="text-gray-300 text-xl leading-relaxed">
+            1950년, 앨런 튜링은
+            “기계도 생각할 수 있을까?”
+            라는 질문을 던졌다.
+          </p>
+
+        </div>
+
+        <!-- 튜링 테스트 -->
+        <div class="content-group fade-in">
+
+          <h3 class="text-4xl font-bold mb-6">
+            튜링 테스트
+          </h3>
+
+          <p class="text-gray-300 text-xl leading-relaxed">
+            인간과 기계를 구분할 수 없다면,
+            기계도 사고한다고 볼 수 있을까?
+          </p>
+
+        </div>
+
+        <!-- Perceptron -->
+        <div class="content-group fade-in">
+
+          <h3 class="text-4xl font-bold mb-6">
+            Perceptron
+          </h3>
+
+          <p class="text-gray-300 text-xl leading-relaxed">
+            1957년, 프랭크 로젠블랫은
+            최초의 신경망 모델인
+            Perceptron을 개발했다.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- 1970 -->
+  <section id="winter">
+
+    <div class="section-scroll">
+
+      <div class="max-w-5xl mx-auto fade-in">
+
+        <p class="text-orange-400 text-lg mb-4">
+          1970s
+        </p>
+
+        <h2 class="text-6xl font-black mb-10">
+          AI Winter
+        </h2>
+
+        <p class="text-gray-300 text-xl leading-relaxed">
+          XOR 문제를 해결하지 못하며
+          Perceptron의 한계가 드러났다.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- 1980 -->
+  <section id="mlp">
+
+    <div class="section-scroll">
+
+      <div class="max-w-5xl mx-auto fade-in">
+
+        <p class="text-orange-400 text-lg mb-4">
+          1980 ~ 1990s
+        </p>
+
+        <h2 class="text-6xl font-black mb-10">
+          MLP의 부활
+        </h2>
+
+        <p class="text-gray-300 text-xl leading-relaxed">
+          제프리 힌턴은
+          역전파 알고리즘을 대중화하며
+          다층 신경망 시대를 열었다.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- 1990 -->
+  <section id="ml">
+
+    <div class="section-scroll">
+
+      <div class="max-w-5xl mx-auto fade-in">
+
+        <p class="text-orange-400 text-lg mb-4">
+          1990s
+        </p>
+
+        <h2 class="text-6xl font-black mb-10">
+          통계적 머신러닝
+        </h2>
+
+        <p class="text-gray-300 text-xl leading-relaxed">
+          결정 트리, SVM,
+          랜덤 포레스트 등의
+          통계 기반 기법이 발전했다.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- 2010 -->
+  <section id="deep">
+
+    <div class="section-scroll">
+
+      <div class="max-w-5xl mx-auto fade-in">
+
+        <p class="text-orange-400 text-lg mb-4">
+          2010s
+        </p>
+
+        <h2 class="text-6xl font-black mb-10">
+          딥러닝 시대
+        </h2>
+
+        <p class="text-gray-300 text-xl leading-relaxed">
+          AlexNet의 등장으로
+          이미지 인식 정확도가
+          급격히 향상되었다.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- 2017 -->
+  <section id="transformer">
+
+    <div class="section-scroll">
+
+      <div class="max-w-5xl mx-auto fade-in">
+
+        <p class="text-orange-400 text-lg mb-4">
+          2017
+        </p>
+
+        <h2 class="text-7xl font-black mb-10 text-orange-300">
+          Transformer
+        </h2>
+
+        <p class="text-gray-300 text-xl leading-relaxed">
+          Attention Is All You Need 논문 발표.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- 2022 -->
+  <section id="genai">
+
+    <div class="section-scroll">
+
+      <div class="max-w-5xl mx-auto fade-in">
+
+        <p class="text-orange-400 text-lg mb-4">
+          2022 ~
+        </p>
+
+        <h2 class="text-7xl font-black mb-10">
+          생성형 AI 시대
+        </h2>
+
+        <p class="text-gray-300 text-xl leading-relaxed">
+          ChatGPT, Gemini, Grok 등의 등장으로
+          생성형 AI 시대가 열렸다.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <script>
+
+    // 연도 이동
+    const sections =
+      document.querySelectorAll("section");
+
+    const links =
+      document.querySelectorAll(".timeline-link");
+
+    links.forEach(link => {
+
+      link.addEventListener("click", (e) => {
+
+        e.preventDefault();
+
+        const target =
+          link.getAttribute("href");
+
+        // 모든 페이지 숨김
+        sections.forEach(sec => {
+          sec.classList.remove("active");
+        });
+
+        // 연도 강조 제거
+        links.forEach(l => {
+          l.classList.remove("active");
+        });
+
+        // 현재 페이지 표시
+        document
+          .querySelector(target)
+          .classList.add("active");
+
+        // 현재 연도 강조
+        link.classList.add("active");
+
+      });
+
+    });
+
+    // fade-in
+    const fadeElements =
+      document.querySelectorAll(".fade-in");
+
+    const observer =
+      new IntersectionObserver((entries) => {
+
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+
+      });
+
+    }, {
+      threshold: 0.2
+    });
+
+    fadeElements.forEach(el => {
+      observer.observe(el);
+    });
+
+  </script>
+
+</body>
+</html>
