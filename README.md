@@ -1,1 +1,1 @@
-# BinarySearchTree
+# 명호고3 동아리 과제_인공지능의 역사
