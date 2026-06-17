@@ -175,14 +175,17 @@
         <!-- 튜링 -->
         <div class="content-group fade-in">
 
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Alan_Turing_Aged_16.jpg"
-            class="section-image shadow-2xl" style="width: 50%; height:50%"
-          />
+            <div>
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Alan_Turing_Aged_16.jpg"
+                    class="section-image shadow-2xl"
+                    style="width: 50%; height:50%"
+                />
 
-          <h3 class="text-4xl font-bold mb-6">
-            앨런 튜링
-          </h3>
+                <h3 class="text-4xl font-bold mb-6">
+                    앨런 튜링
+                </h3>
+            </div>
 
           <p class="text-gray-300 text-xl leading-relaxed">
             1950년, 앨런 튜링은
